@@ -1,8 +1,6 @@
 pipeline {
   // pipelineを実行するagentの設定。yamlファイルで設定を渡せる
   // 可能な限りJenkinsfileにagentの設定をもたせたほうが自動化とGit管理が進むためおすすめ。
-  def deploy_project = "user1-development"
-  
   agent {
     kubernetes {
       cloud 'openshift'
